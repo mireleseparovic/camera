@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="shortcut icon" type="image/png" href="cima.png"/>
+  
+  <style>
+
+ body {
+    background-color: #696969;
+ }
+	  
+  #btnplay,
+  #btnPause,
+  #btnChangeCamera {
+  fot-size: 3.0em;
+  padding: 0.5em 1em;
+  }
+  
+  #btnScreenshot {
+  background-color: #FF007C;
+  border-color: #FFFF00	;
+  color: #FFFF00;
+  }
+
+  #titleInput {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+	  
+  }
+  
+  </style>
+  
+  
+  
+  
+</head>
+
+<body>
+ <center>
+ <img src="topo.png" alt="some text" width=160 height=80 >
+ </center>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-four-fifths">
+		<center>
+          <h1 class="title">
+            Câmera
+          </h1></center>
+		  
+		  <input type="text" id="titleInput" placeholder="Enter image title">
+
+		  
+          <video autoplay id="video"></video>
+          <button class="button is-hidden" id="btnPlay">
+            <span class="icon is-small">
+              <i class="fas fa-play"></i>
+            </span>
+          </button>
+          <button class="button" id="btnPause">
+            <span class="icon is-small">
+              <i class="fas fa-pause"></i>
+            </span>
+          </button>
+          <button class="button is-success" id="btnScreenshot">
+            <span class="icon is-small">
+              <i class="fas fa-camera"></i>
+            </span>
+          </button>
+          <button class="button" id="btnChangeCamera">
+            <span class="icon">
+              <i class="fas fa-sync-alt"></i>
+            </span>
+            <span>Switch camera</span>
+          </button>
+        </div>
+        <div class="column">
+          <h2 class="title">Captura de Tela</h2>
+          <div id="screenshots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <canvas class="is-hidden" id="canvas"></canvas>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
